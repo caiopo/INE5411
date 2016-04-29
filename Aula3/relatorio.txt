@@ -1,0 +1,21 @@
+1.1:
+a) 0x10010000
+
+b) 0x10010008
+
+1.2:
+a) 9
+
+b) 0x10010024
+
+1.3:
+
+Se todos os elementos do arranjo forem iguais a k, o laco de iteracão excederá o arranjo e após testar todos os elementos do arranjo, testará o elemento que vem na sequência na memória, que nesse exercício é k, essencialmente testando se k é igual a k e incrementando erroneamente o i.
+
+2.1:
+8
+
+2.2:
+a) 0x10010024
+
+b)
