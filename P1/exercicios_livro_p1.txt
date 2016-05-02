@@ -1,0 +1,204 @@
+Aula 1:
+(2) 1.1, 1.2
+
+Aula 4:
+(12) 2.1.1, 2.2.1, 2.3.1, 2.2.4, 2.3.4, 2.4.1, 2.4.4,  2.5.4, 2.5.5, 2.11.5, 2.12.1, 2.12.2
+
+Aula 5:
+(4) 2.15.2, 2.15.5, 2.16.4, 2.17.3
+
+Aula 6:
+(3) 2.19.1a, 2.19.2a, 2.19.4a
+
+Aula 7:
+(5) 2.24.1, 2.25.1, 2.25.2, 2.25.3, 2.25.6
+
+Aula 8:
+(5) 2.34.1a, 2.35.2a, 2.36.1a, 2.37.2a, 2.37.4b
+
+Aula 9:
+(6) 2.9.1, 2.9.2, 2.9.4, 2.28.2, 2.28.3, 2.28.4
+
+Aula 11: )
+(17 1.3.1, 1.3.2, 1.3.4, 1.4.1, 1.4.2, 1.5.1a, 1.6.1a, 1.7.2, 1.7.3, 1.7.4, 1.8.1, 1.8.2, 1.9.3a, 1.10.2a, 1.10.4a, 1.10.5a, 1.10.6a
+
+Aula 12:
+(6) 1.12.1, 1.12.2, 1.12.3, 1.14.1, 1.14.2, 1.14.3
+
+Aula 14:
+(3) 2.30.1, 2.21.2, 2.21.1
+
+Aula 15:
+(1) 2.31.1
+
+-----------
+
+1.1:
+1. servers
+2. terabyte
+3. supercomputers
+4. virtual worlds
+5. RAM
+6. CPU
+7. data centers
+8. multicore processors
+9. low-end servers
+10. embedded computers
+11. VHDL
+12. desktop computers
+13. compiler
+14. assembler
+15. COBOL
+16. machine language
+17. instruction
+18. Fortran
+19. assembly language
+20. operating system
+21. application software
+22. bit
+23. system software
+24. C
+25.
+26. gigabyte
+
+1.2:
+
+2.1.1:
+a)  add f, g, h
+	add f, f, i
+	add f, f, j
+
+
+b)  subi $t0, h, 5
+	add f, g, $t0
+
+2.2.1:
+a)  sll f, f, 2
+	add f, f, i
+
+b)  addi f, j, 2
+	add f, f g
+
+2.3.1:
+a)  add f, f, g
+	add f, f, h
+	add f, f, i
+	add f, f, j
+	addi f, f, 2
+
+b)  addi $t0, f, 5
+	sub f, g, $t0
+
+2.2.4:
+a)  f += h;
+b)  f = -f;
+	++f;
+
+2.3.4:
+a)  f = h - g;
+b)  h = f + 1;
+	f = g - h;
+
+2.4.1:
+a)  lw $s0, 16($s7)
+	add $s0, $s0, $s1
+	add $s0, $s0, $s2
+
+b)  lw $s0, 16($s7)
+	sll $s0, $s0, 2
+	add $s0, $s0, $s6
+	sub $s0, $s1, $s0
+
+2.4.4:
+a)  f = g + h + i + j;
+
+b)  f = A[1];
+
+2.5.4:
+a)
+b)
+
+2.5.5:
+Big Endian:
+Mem |  a |  b
+  0 | 12 | be
+  1 | 34 | ad
+  2 | 56 | f0
+  3 | 78 | 0d
+
+Little Endian:
+Mem |  a |  b
+  0 | 78 | 0d
+  1 | 56 | f0
+  2 | 34 | ad
+  3 | 12 | be
+
+2.11.5:
+a) sub $at, $v0, $v1
+b) sw $s0, 4($a2)
+
+2.12.1:
+a)  26 bits/intr
+
+	25-20 opcode
+	19-17 rs
+	16-14 rt
+	13-11 rd
+	10-6  shamt
+	5-0   funct
+
+b)  No change
+
+2.12.2:
+a)  28 bits/instr
+
+	27-22 opcode
+	21-19 rs
+	18-16 rt
+	15-0  immediate
+
+b)  26 bits/instr
+
+	25-20 opcode
+	20-16 rs
+	15-11 rt
+	10-0  immediate
+
+2.15.2:
+a)  nor $at, $t3, $zero
+	and $t1, $t2, $at
+
+b)  xor $at, $t2, $t3
+	nor $t1, $at, $zero
+
+2.15.5:
+a)  lw $t0, 0(C)
+	and A, B, $t0
+
+b)  beqz A, Else
+	move A, B
+	j Exit
+	Else: lw A, 0(C)
+	Exit:
+
+2.16.4:
+a) 0
+b) 0
+
+2.17.3:
+a)
+Versão hackish:
+sra $t1, $t0, 31
+xor $t0, $t0, $t1
+sub $t0, $t0, $t1
+
+Versão normal:
+bltz $t3, isltz
+move $t3, $t2
+j exit
+isltz:
+sub $t2, $zero, $t3
+
+b) slt $t1, $t3, $t2
+
+(4) 2.15.2, 2.15.5, 2.16.4, 2.17.3
