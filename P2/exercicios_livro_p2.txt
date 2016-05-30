@@ -1,0 +1,166 @@
+Aula 19:
+(8) 4.12.1a, 4.12.2a, 4.12.3a, 4.13.2, 4.13.3, 4.13.4, 4.13.5, 4.13.6
+
+Aula 21:
+(8) 4.14.1, 4.14.2, 4.14.3, 4.14.4, 4.14.5, 4.14.6 4.16.4, 4.16.5
+
+Aula 23:
+(3) 4.29.4, 4.29.5, 4.29.6
+
+-------
+
+4.12.1a:
+Pipelined: 500ps
+Non Pipelined: 1650ps
+
+
+4.12.2a:
+Pipelined: 2500ps
+Non Pipelined: 1650ps
+
+
+4.12.3a:
+MEM
+400ps
+
+
+4.13.2:
+a)
+
+lw
+add
+nop
+nop
+sw
+
+b)
+
+lw
+nop
+nop
+sw
+add
+
+
+4.13.3:
+a)
+
+lw
+add
+sw
+
+b)
+
+lw
+nop
+sw
+add
+
+
+4.13.4:
+a)
+No fowarding:   2700ps
+Full fowarding: 2800ps
+Gain:           -100ps
+
+b)
+No fowarding:   1800ps
+Full fowarding: 2000ps
+Gain:           -200ps
+
+
+4.13.5:
+a)
+
+
+
+4.13.6:
+
+
+-----
+
+4.14.1:
+a)
+lw
+beq
+add
+*
+sw
+
+b)
+lw
+sw
+lw
+*
+*
+*
+beq
+add
+
+Não, porque nop também é uma instrucão que precisa ser buscada na memória, logo a deteccão deste tipo de hazard deve ser feita pelo hardware.
+
+4.14.2:
+a) 8/7
+b) 9/8
+
+
+4.14.3:
+a)
+
+ID:
+lw
+beq
+*
+add
+sw
++4
+
+9 ciclos
+
+
+EX:
+lw
+beq
+*
+*
+add
+sw
++4
+
+10 ciclos
+
+10/9
+
+b)
+ID:
+lw
+sw
+lw
+beq
+*
+add
+
+10 ciclos
+
+EX:
+lw
+sw
+lw
+beq
+*
+*
+add
+
+11 ciclos
+
+11/10
+
+4.14.4:
+
+4.14.5:
+
+4.14.6:
+
+4.16.4:
+
+4.16.5:
